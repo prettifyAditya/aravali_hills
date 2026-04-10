@@ -1183,11 +1183,12 @@ img, video {
 }
 @media only screen and (max-width: 768px) {
   .btn {
-    height: 30px;
+    --height: 36px;
   }
 }
 @media only screen and (max-width: 540px) {
   .btn {
+    --height: 32px;
     font-size: 12px;
     --padding: 14px;
   }
@@ -4683,6 +4684,80 @@ header.header-shadow {
   transition: 0.5s ease;
   opacity: 1;
   transform: scale(1);
+}
+
+.model.filter-pop {
+  right: 0;
+  max-width: 480px;
+  transform: translateX(100%);
+  transition: 0.5s ease;
+  z-index: 10;
+}
+.model.filter-pop.is-open {
+  transform: translateX(0%);
+}
+.model.filter-pop .close {
+  top: 17px;
+  right: 22px;
+}
+.model.filter-pop .close:hover svg path {
+  stroke: var(--black) !important;
+}
+.model.filter-pop .close svg {
+  width: 20px;
+  height: 20px;
+}
+.model.filter-pop .close svg path {
+  stroke: var(--text) !important;
+  stroke-width: 2 !important;
+}
+.model.filter-pop .model-body {
+  padding: 0px 30px 30px;
+  margin-top: 60px;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.model.filter-pop .model-body::-webkit-scrollbar {
+  width: 0px;
+  background: var(--black);
+  height: 0px;
+}
+.model.filter-pop .model-body::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+.model.filter-pop .model-body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 0px;
+}
+@media only screen and (max-width: 540px) {
+  .model.filter-pop .model-body {
+    padding: 0 20px 20px;
+  }
+}
+.model.filter-pop .model-body .filter_wrap .form-group {
+  --inputsize: 34px;
+  --selectheight: var(--inputsize);
+  background: #F9FAFB;
+  padding: 0 10px;
+  --labelfontbefore: 14px;
+  border-radius: 5px;
+  --arrow: 8px;
+  --paddingleftright: 10px;
+}
+.model.filter-pop .model-body .filter_wrap .form-group:not(:last-child) {
+  margin-bottom: 15px;
+}
+@media only screen and (max-width: 540px) {
+  .model.filter-pop .model-body .filter_wrap .form-group:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+.model.filter-pop .model-body .filter_wrap .submit-grp .btn {
+  margin: 30px auto 0;
+  --height: 34px;
 }
 
 .message-pop {

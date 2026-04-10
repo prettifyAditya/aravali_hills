@@ -637,6 +637,58 @@ header
                             opacity: 1
                             transform: scale(1)
 
+.model.filter-pop
+    right: 0
+    max-width: 480px
+    transform: translateX(100%)
+    transition: .5s ease
+    z-index: 10
+    &.is-open
+        transform: translateX(0%)
+    .close
+        top: 17px
+        right: 22px
+        &:hover
+            svg
+                path
+                    stroke: $black !important
+        svg
+            width: 20px
+            height: 20px
+            path
+                stroke: $text !important
+                stroke-width: 2 !important
+    .model-body
+        padding: 0px 30px 30px
+        margin-top: 60px
+        height: calc(100% - 60px)
+        overflow-y: auto
+        display: flex
+        flex-direction: column
+        position: relative
+        @include scrollbar(0px,$black,#fff,0px)
+        @include media(540)
+            padding: 0 20px 20px
+        .filter_wrap
+            .form-group
+                --inputsize: 34px
+                --selectheight: var(--inputsize)
+                background: #F9FAFB
+                padding: 0 10px
+                --labelfontbefore: 14px
+                border-radius: 5px
+                --arrow: 8px
+                --paddingleftright: 10px
+                &:not(:last-child)
+                    margin-bottom: 15px
+                    @include media(540)
+                        margin-bottom: 12px
+            .submit-grp
+                .btn
+                    margin: 30px auto 0
+                    --height: 34px
+        
+
 
 .message-pop
     position: fixed
@@ -851,7 +903,6 @@ footer
                 img
                     width: 80px
                     padding-left: 10px
-
 
 .thanks_banner
     margin-top: var(--headerheight)

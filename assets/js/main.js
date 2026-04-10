@@ -43,17 +43,21 @@ $(function () {
             }
         }); 
     } else {
-        $bottomFilterWrap.addClass("model")
+        // $bottomFilterWrap.addClass("model")
         $moreFilterBtn.on('click', function() {
-            $bottomFilterWrap.addClass("is-open")
-            $bottomFilterWrap.parents(".banner-wrapper").addClass("model_open")
-            $("body, html").addClass("overflow-hidden")
+            openModel(".filter-pop")
+            // $bottomFilterWrap.addClass("is-open")
+            // $bottomFilterWrap.parents(".banner-wrapper").addClass("model_open")
+            // $("body, html").addClass("overflow-hidden")
         })
-        $closeFilterBtn.on('click', function() {
-            $bottomFilterWrap.removeClass("is-open")
-            $bottomFilterWrap.parents(".banner-wrapper").removeClass("model_open")
-            $("body, html").removeClass("overflow-hidden")
+        $(".search-btn").on("click", function() {
+            closeModel(".filter-pop")
         })
+        // $closeFilterBtn.on('click', function() {
+        //     $bottomFilterWrap.removeClass("is-open")
+        //     $bottomFilterWrap.parents(".banner-wrapper").removeClass("model_open")
+        //     $("body, html").removeClass("overflow-hidden")
+        // })
     }
 
     $('.title').click(function () {
