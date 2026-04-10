@@ -300,6 +300,12 @@
             padding: 25px
         @include media(540)
             padding: 20px
+        &.refinance
+            ul
+                li
+                    svg
+                        path
+                            stroke: $primary
         h4
             font-size: 24px
             font-weight: 500
@@ -529,6 +535,13 @@
         @include media(768)
             padding: 20px
             margin-top: 25px
+        &.refinance
+            ul
+                grid-template-columns: repeat(3,1fr)
+                @include media(991)
+                    grid-template-columns: repeat(2,1fr)
+                @include media(768)
+                    grid-template-columns: repeat(1, 1fr)
         ul
             display: grid
             grid-template-columns: repeat(2,1fr)
@@ -586,6 +599,27 @@
             h6
                 font-weight: 600
                 margin-bottom: 5px
+            ul
+                li
+                    position: relative
+                    padding-left: 15px 
+                    font-size: 14px
+                    font-weight: 400
+                    color: $text
+                    @include media(675)
+                        padding-left: 15px
+                    &:not(:last-child)
+                        margin-bottom: 4px
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 0
+                        transform: translate(0, -50%)
+                        width: 5px
+                        height: 5px
+                        border-radius: 50%
+                        background: $text
 .zero-downPayment
     .zero_notify
         background: var(--gradient-c)
