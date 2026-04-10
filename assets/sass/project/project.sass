@@ -1,0 +1,114 @@
+@import '../_var'
+
+.project-secA
+    margin-top: var(--headerheight)
+    background: #fbf9fa
+    .heading
+        h3
+            line-height: 1.2
+        p
+            color: var(--text)
+    .searchWrapper
+        margin: 40px 0 35px
+        padding: 30px
+        border-radius: 10px
+        background: $white
+        box-shadow: 0px 4px 6px -1px #0000001a
+        @include media(1170)
+            padding:  20px
+        @include media(768)
+            margin: 30px 0 25px
+        @include media(540)
+            margin: 25px 0 
+            padding: 12px
+        .form
+            display: grid
+            grid-template-columns: 1fr 300px 170px
+            gap: 20px
+            @include media(991)
+                grid-template-columns: 1fr .4fr .4fr 
+            @include media(768)
+                grid-template-columns: repeat(2, 1fr)
+                gap: 15px
+            @include media(540)
+                gap: 10px
+            .form-group
+                position: relative 
+                border-radius: 10px
+                &:first-child
+                    @include media(768)
+                        grid-column: span 2
+                .custom-select
+                    .current
+                        color: var(--black)
+                img,svg
+                    width: 24px
+                    height: 24px
+                    position: absolute
+                    top: 50%
+                    left: 17px
+                    transform: translateY(-50%)
+                .seacrh
+                    padding-left: 50px
+                    outline: none
+                    width: 100%
+                    color: var(--text)
+            .collapse
+                border: 1px solid var(--border)
+                padding: 5px 20px
+                font-size: 16px
+                color: var(--black)
+                font-weight: 600
+                img,svg
+                    width: 24px
+                    height: 24px
+    .grid
+        display: grid
+        grid-template-columns: 30% 1fr
+        gap: 45px
+        // background: var(--bgcolor)
+        // padding: 40px 
+        @include media(1280)
+            gap: 30px
+        @include media(991)
+            grid-template-columns: 1fr
+        &.full
+            grid-template-columns: 1fr
+        .filter-wrapper
+            background: var(--white)
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+            border-radius: 10px
+            padding: 20px
+            position: sticky
+            top: var(--headerheight)
+            @include media(991)
+                position: static
+            &.hide
+                display: none
+            .filter-head
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-bottom: 20px
+                .filter-title
+                    font-size: 20px
+                    font-weight: 700
+                    color: var(--black)
+                    margin: 0
+        .prop_wrap
+            .lenght
+                font-size: 18px
+                font-weight: 600
+                @include media(540)
+                    font-size: 16px
+            .prop_grid
+                display: grid
+                grid-template-columns: repeat(3, 1fr)
+                gap: 30px
+                margin-top: 25px
+                @include media(1366)
+                    grid-template-columns: repeat(2, 1fr)
+                @include media(1280)
+                    gap: 20px
+                @include media(675)
+                    grid-template-columns: repeat(1, 1fr)

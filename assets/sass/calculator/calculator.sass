@@ -1,0 +1,251 @@
+@import '../_var'
+
+main
+    margin-top: var(--headerheight)
+
+.emi_calculator 
+    --container: 850px
+    &.refinance-calculator
+        .calculator_wrapper
+            .main_wrapper
+                flex-direction: column
+                .colA, .colB 
+                    max-width: 100%
+                    .form-grid
+                        --item: 2
+                    .result_wrapper
+                        display: grid
+                        grid-template-columns: repeat(3, 1fr)
+                        grid-gap: 15px
+                        @include media(768)
+                            grid-gap: 12px
+                        @include media(540)
+                            grid-template-columns: repeat(1, 1fr)
+                        .result_col
+                            margin-bottom: 0
+                            @include media(768)
+                                padding: 12px
+                            &:nth-child(1)
+                                background: #eff6ff
+                            &:nth-child(2)
+                                background: #f0fdf4
+                            &:nth-child(3)
+                                background: #faf5ff
+    &.area-calculator
+        .calculator_wrapper
+            .main_wrapper
+                flex-direction: column
+                .colA, .colB 
+                    max-width: 100%
+                    .form-grid
+                        --item: 3
+                    .result_wrapper
+                        .result_col
+                            background: #f0fdf4
+                            border: 2px solid #b9f8cf
+                            h6
+                                &:last-child
+                                    font-size: 18px
+                            p
+                                color: #00a63e
+    &.stamp-duty-calculator
+        .calculator_wrapper
+            .main_wrapper
+                .result_wrapper
+                    .result_col
+                        text-align: left
+                        &:last-child
+                            border: 2px solid #b9f8cf
+                            p
+                                color: #00a63e
+                        .icon
+                            margin-left: 0
+            .note
+                background: #eff6ff
+                border-color: #bedbff
+    &.affordability-calculator
+        .calculator_wrapper
+            .main_wrapper
+                .result_wrapper
+                    .result_col
+                        &:nth-child(1)
+                            background: #f0fdf4
+                            border: 2px solid #b9f8cf
+                            p
+                                color: #00a63e
+                            h6
+                                &:last-child
+                                    font-size: 12px
+                        &:nth-child(2)
+                            background: #eff6ff
+                        &:nth-child(3)
+                            background: #faf5ff
+            .note
+                background: #eff6ff
+                border-color: #bedbff
+    .heading
+        margin-bottom: 50px
+        @include media(991)
+            margin-bottom: 40px
+        @include media(768)
+            margin-bottom: 30px
+        @include media(540)
+            margin-bottom: 20px
+        p
+            font-size: 20px
+            @include media(768)
+                font-size: 18px
+            @include media(540)
+                font-size: 16px
+    .calculator_wrapper
+        padding: 32px
+        background: $white
+        border-radius: 10px
+        box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.1019607843)
+        @include media(768)
+            padding: 25px
+        @include media(540)
+            padding: 20px
+        .main_wrapper
+            align-items: start
+            --gap: 40px
+            gap: var(--gap)
+            @include media(768)
+                --gap: 30px
+                flex-direction: column
+            @include media(540)
+                --gap: 20px
+            .colA, .colB
+                flex: 1
+                max-width: 50%
+                width: 100%
+                @include media(768)
+                    max-width: 100%
+            .result_wrapper
+                .result_col
+                    padding: 24px
+                    border-radius: 10px
+                    text-align: center
+                    @include media(540)
+                        padding: 15px
+                    &:not(:last-child)
+                        margin-bottom: 15px
+                    &:nth-child(1)
+                        background: #eff6ff
+                    &:nth-child(2)
+                        background: #faf5ff
+                    &:nth-child(3)
+                        background: #f0fdf4
+                    .icon
+                        width: 32px
+                        height: 32px
+                        margin: 0 auto 10px
+                        @include media(540)
+                            width: 30px
+                            height: 30px
+                            margin: 0 auto 8px
+                        svg, img
+                            width: 100%
+                            height: 100%
+                    h6
+                        font-size: 14px
+                        font-weight: 400
+                        color: $text
+                    p
+                        font-size: 30px
+                        font-weight: 600
+                        color: $black
+                        margin-top: 10px
+                        @include media(540)
+                            font-size: 24px
+                            margin-top: 8px
+
+.note
+    margin-top: 30px
+    padding: 15px
+    border-radius: 10px
+    border: 1px solid #fff085
+    background: #fefce8
+    @include media(540)
+        margin-top: 20px
+        padding: 12px
+    p
+        font-size: 14px
+        color: $black
+        strong
+            font-weight: 600
+    ul
+        margin-top: 15px
+        @include media(540)
+            margin-top: 10px
+        li
+            position: relative
+            padding-left: 15px 
+            font-size: 14px
+            font-weight: 400
+            color: $text
+            @include media(675)
+                padding-left: 15px
+            &:not(:last-child)
+                margin-bottom: 4px
+            &::before
+                content: ''
+                position: absolute
+                top: 50%
+                left: 0
+                transform: translate(0, -50%)
+                width: 5px
+                height: 5px
+                border-radius: 50%
+                background: $text
+
+.quick_reference_sec
+    padding-bottom: 70px
+    --container: 850px
+    @include media(768)
+        padding-bottom: 60px
+    @include media(540)
+        padding-bottom: 50px
+    .container
+        padding: 32px
+        background: $white
+        border-radius: 10px
+        box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.1019607843)
+        @include media(768)
+            padding: 25px
+        @include media(540)
+            padding: 20px
+        .heading
+            margin-bottom: 20px
+            @include media(540)
+                margin-bottom: 15px
+            h2
+                font-size: 24px
+                @include media(768)
+                    font-size: 22px
+                @include media(540)
+                    font-size: 20px
+        .reference_wrapper
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 15px
+            @include media(768)
+                gap: 10px
+            @include media(540)
+                grid-template-columns: repeat(1, 1fr)
+                gap: 15px
+            .reference_col
+                padding: 16px
+                border-radius: 10px
+                background: #fbf9fa
+                @include media(768)
+                    padding: 10px
+                h6
+                    font-weight: 600
+                    margin-bottom: 5px
+                    font-size: 14px
+                p
+                    font-size: 14px
+                    line-height: 1.2
+                    @include media(768)
+                        font-size: 12px

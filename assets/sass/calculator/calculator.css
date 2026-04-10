@@ -1,0 +1,391 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+main {
+  margin-top: var(--headerheight);
+}
+
+.emi_calculator {
+  --container: 850px;
+}
+.emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper {
+  flex-direction: column;
+}
+.emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colA, .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colB {
+  max-width: 100%;
+}
+.emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colA .form-grid, .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colB .form-grid {
+  --item: 2;
+}
+.emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper, .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+}
+@media only screen and (max-width: 768px) {
+  .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper, .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper {
+    grid-gap: 12px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper, .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper .result_col, .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper .result_col {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 768px) {
+  .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper .result_col, .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper .result_col {
+    padding: 12px;
+  }
+}
+.emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper .result_col:nth-child(1), .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper .result_col:nth-child(1) {
+  background: #eff6ff;
+}
+.emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper .result_col:nth-child(2), .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper .result_col:nth-child(2) {
+  background: #f0fdf4;
+}
+.emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper .result_col:nth-child(3), .emi_calculator.refinance-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper .result_col:nth-child(3) {
+  background: #faf5ff;
+}
+.emi_calculator.area-calculator .calculator_wrapper .main_wrapper {
+  flex-direction: column;
+}
+.emi_calculator.area-calculator .calculator_wrapper .main_wrapper .colA, .emi_calculator.area-calculator .calculator_wrapper .main_wrapper .colB {
+  max-width: 100%;
+}
+.emi_calculator.area-calculator .calculator_wrapper .main_wrapper .colA .form-grid, .emi_calculator.area-calculator .calculator_wrapper .main_wrapper .colB .form-grid {
+  --item: 3;
+}
+.emi_calculator.area-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper .result_col, .emi_calculator.area-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper .result_col {
+  background: #f0fdf4;
+  border: 2px solid #b9f8cf;
+}
+.emi_calculator.area-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper .result_col h6:last-child, .emi_calculator.area-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper .result_col h6:last-child {
+  font-size: 18px;
+}
+.emi_calculator.area-calculator .calculator_wrapper .main_wrapper .colA .result_wrapper .result_col p, .emi_calculator.area-calculator .calculator_wrapper .main_wrapper .colB .result_wrapper .result_col p {
+  color: #00a63e;
+}
+.emi_calculator.stamp-duty-calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col {
+  text-align: left;
+}
+.emi_calculator.stamp-duty-calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:last-child {
+  border: 2px solid #b9f8cf;
+}
+.emi_calculator.stamp-duty-calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:last-child p {
+  color: #00a63e;
+}
+.emi_calculator.stamp-duty-calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col .icon {
+  margin-left: 0;
+}
+.emi_calculator.stamp-duty-calculator .calculator_wrapper .note {
+  background: #eff6ff;
+  border-color: #bedbff;
+}
+.emi_calculator.affordability-calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:nth-child(1) {
+  background: #f0fdf4;
+  border: 2px solid #b9f8cf;
+}
+.emi_calculator.affordability-calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:nth-child(1) p {
+  color: #00a63e;
+}
+.emi_calculator.affordability-calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:nth-child(1) h6:last-child {
+  font-size: 12px;
+}
+.emi_calculator.affordability-calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:nth-child(2) {
+  background: #eff6ff;
+}
+.emi_calculator.affordability-calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:nth-child(3) {
+  background: #faf5ff;
+}
+.emi_calculator.affordability-calculator .calculator_wrapper .note {
+  background: #eff6ff;
+  border-color: #bedbff;
+}
+.emi_calculator .heading {
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 991px) {
+  .emi_calculator .heading {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .emi_calculator .heading {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .emi_calculator .heading {
+    margin-bottom: 20px;
+  }
+}
+.emi_calculator .heading p {
+  font-size: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .emi_calculator .heading p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .emi_calculator .heading p {
+    font-size: 16px;
+  }
+}
+.emi_calculator .calculator_wrapper {
+  padding: 32px;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.1019607843);
+}
+@media only screen and (max-width: 768px) {
+  .emi_calculator .calculator_wrapper {
+    padding: 25px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .emi_calculator .calculator_wrapper {
+    padding: 20px;
+  }
+}
+.emi_calculator .calculator_wrapper .main_wrapper {
+  align-items: start;
+  --gap: 40px;
+  gap: var(--gap);
+}
+@media only screen and (max-width: 768px) {
+  .emi_calculator .calculator_wrapper .main_wrapper {
+    --gap: 30px;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .emi_calculator .calculator_wrapper .main_wrapper {
+    --gap: 20px;
+  }
+}
+.emi_calculator .calculator_wrapper .main_wrapper .colA, .emi_calculator .calculator_wrapper .main_wrapper .colB {
+  flex: 1;
+  max-width: 50%;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .emi_calculator .calculator_wrapper .main_wrapper .colA, .emi_calculator .calculator_wrapper .main_wrapper .colB {
+    max-width: 100%;
+  }
+}
+.emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col {
+  padding: 24px;
+  border-radius: 10px;
+  text-align: center;
+}
+@media only screen and (max-width: 540px) {
+  .emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col {
+    padding: 15px;
+  }
+}
+.emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:not(:last-child) {
+  margin-bottom: 15px;
+}
+.emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:nth-child(1) {
+  background: #eff6ff;
+}
+.emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:nth-child(2) {
+  background: #faf5ff;
+}
+.emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col:nth-child(3) {
+  background: #f0fdf4;
+}
+.emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col .icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 10px;
+}
+@media only screen and (max-width: 540px) {
+  .emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col .icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 8px;
+  }
+}
+.emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col .icon svg, .emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col .icon img {
+  width: 100%;
+  height: 100%;
+}
+.emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col h6 {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+}
+.emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col p {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--black);
+  margin-top: 10px;
+}
+@media only screen and (max-width: 540px) {
+  .emi_calculator .calculator_wrapper .main_wrapper .result_wrapper .result_col p {
+    font-size: 24px;
+    margin-top: 8px;
+  }
+}
+
+.note {
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #fff085;
+  background: #fefce8;
+}
+@media only screen and (max-width: 540px) {
+  .note {
+    margin-top: 20px;
+    padding: 12px;
+  }
+}
+.note p {
+  font-size: 14px;
+  color: var(--black);
+}
+.note p strong {
+  font-weight: 600;
+}
+.note ul {
+  margin-top: 15px;
+}
+@media only screen and (max-width: 540px) {
+  .note ul {
+    margin-top: 10px;
+  }
+}
+.note ul li {
+  position: relative;
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+}
+@media only screen and (max-width: 675px) {
+  .note ul li {
+    padding-left: 15px;
+  }
+}
+.note ul li:not(:last-child) {
+  margin-bottom: 4px;
+}
+.note ul li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--text);
+}
+
+.quick_reference_sec {
+  padding-bottom: 70px;
+  --container: 850px;
+}
+@media only screen and (max-width: 768px) {
+  .quick_reference_sec {
+    padding-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .quick_reference_sec {
+    padding-bottom: 50px;
+  }
+}
+.quick_reference_sec .container {
+  padding: 32px;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.1019607843);
+}
+@media only screen and (max-width: 768px) {
+  .quick_reference_sec .container {
+    padding: 25px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .quick_reference_sec .container {
+    padding: 20px;
+  }
+}
+.quick_reference_sec .container .heading {
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 540px) {
+  .quick_reference_sec .container .heading {
+    margin-bottom: 15px;
+  }
+}
+.quick_reference_sec .container .heading h2 {
+  font-size: 24px;
+}
+@media only screen and (max-width: 768px) {
+  .quick_reference_sec .container .heading h2 {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .quick_reference_sec .container .heading h2 {
+    font-size: 20px;
+  }
+}
+.quick_reference_sec .container .reference_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
+@media only screen and (max-width: 768px) {
+  .quick_reference_sec .container .reference_wrapper {
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .quick_reference_sec .container .reference_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+}
+.quick_reference_sec .container .reference_wrapper .reference_col {
+  padding: 16px;
+  border-radius: 10px;
+  background: #fbf9fa;
+}
+@media only screen and (max-width: 768px) {
+  .quick_reference_sec .container .reference_wrapper .reference_col {
+    padding: 10px;
+  }
+}
+.quick_reference_sec .container .reference_wrapper .reference_col h6 {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.quick_reference_sec .container .reference_wrapper .reference_col p {
+  font-size: 14px;
+  line-height: 1.2;
+}
+@media only screen and (max-width: 768px) {
+  .quick_reference_sec .container .reference_wrapper .reference_col p {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=calculator.css.map */

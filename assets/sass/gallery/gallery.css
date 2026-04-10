@@ -1,0 +1,91 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+header.header-fixed .header-container .colB .nav-items li a {
+  color: var(--white);
+}
+header.header-fixed .header-container .colB .nav-items li a:hover {
+  color: var(--primary);
+}
+header.header-fixed .header-container .colB .nav-items li button.ham-btn span {
+  background-color: var(--white);
+}
+header.header-fixed .header-container .colB .nav-items li button.ham-btn:hover span {
+  background-color: var(--primary);
+}
+header .header-container .colB .nav-items li a {
+  color: var(--black);
+}
+header .header-container .colB .nav-items li button.ham-btn span {
+  background-color: var(--black);
+}
+
+.gallery_sec {
+  background: linear-gradient(180deg, #EDED91 0%, #F8F9D8 70%);
+  padding: 220px 0 80px;
+}
+.gallery_sec .heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.gallery_sec .heading h2 {
+  color: var(--black);
+  font-weight: 500;
+}
+.gallery_sec .gallery_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px 20px;
+}
+.gallery_sec .gallery_wrapper .gallery_item {
+  display: block;
+  height: 360px;
+}
+.gallery_sec .gallery_wrapper .gallery_item::before {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+.gallery_sec .gallery_wrapper .gallery_item:hover figure img {
+  transform: scale(1.1);
+}
+.gallery_sec .gallery_wrapper .gallery_item figure {
+  position: relative;
+}
+.gallery_sec .gallery_wrapper .gallery_item figure::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 55px 12px white;
+  transform: skewX(-20deg);
+  z-index: 1;
+}
+.gallery_sec .gallery_wrapper .gallery_item figure:hover::before {
+  animation: shine 0.4s linear;
+  animation-fill-mode: none;
+}
+.gallery_sec .gallery_wrapper .gallery_item figure img {
+  transition: 0.8s ease;
+}
+.gallery_sec .gallery_wrapper .gallery_item figcaption {
+  padding: 0 30px 30px;
+}
+.gallery_sec .gallery_wrapper .gallery_item figcaption h6 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}/*# sourceMappingURL=gallery.css.map */

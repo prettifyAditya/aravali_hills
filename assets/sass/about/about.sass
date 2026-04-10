@@ -1,0 +1,91 @@
+@import '../_var'
+
+.about_sec
+    margin: calc(var(--headerheight) ) 0 0 0
+    background: var(--secondary)
+    padding: 40px 0
+    .grid
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 40px
+        align-items: center
+        @include media(991)
+            grid-template-columns: repeat(1, 1fr)
+        .content
+            h3
+                font-size: 32px
+                color: var(--white)
+                margin-bottom: 20px
+                @include media(768)
+                    font-size: 28px
+                @include media(540)
+                    font-size: 24px
+                    margin-bottom: 10px
+            p
+                font-size: 18px
+                color: var(--lightwhite)
+                font-weight: 300
+                @include media(768)
+                    font-size: 16px
+                @include media(540)
+                    font-size: 14px
+            ul
+                margin-top: 35px
+                @include media(768)
+                    margin-top: 30px
+                @include media(540)
+                    margin-top: 25px
+                li
+                    display: flex
+                    gap: 12px
+                    @include media(540)
+                        gap: 10px
+                    &:not(:last-child)
+                        margin-bottom: 24px
+                        @include media(768)
+                            margin-bottom: 18px
+                        @include media(540)
+                            margin-bottom: 12px
+                    img
+                        width: 24px
+                        height: 24px
+                    h6
+                        font-weight: 600
+                        font-size: 18px
+                        line-height: 1
+                        margin-bottom: 5px
+                        color: var(--white)
+                        @include media(540)
+                            font-size: 16px
+                    p
+                        font-size: 16px
+                        color: var(--lightwhite)
+                        font-weight: 300
+                        @include media(540)
+                            font-size: 14px
+        .card_grid
+            display: grid
+            grid-template-columns: repeat(2,1fr)
+            gap: 20px
+            @include media(540)
+                grid-template-columns: repeat(1, 1fr)
+            .icon_card
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                text-align: center
+                background: #1D293D
+                box-shadow: none
+                .icon2
+                    background: var(--primary)
+                    width: 60px
+                    height: 60px
+                    border-radius: 50%
+                    img
+                        filter: brightness(0) invert(1)
+                h6
+                    color: #51a2ff
+                    font-size: 30px
+                p
+                    color: var(--lightwhite)

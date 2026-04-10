@@ -1,0 +1,60 @@
+@import '../_var'
+
+header
+    &.header-fixed
+        .header-container
+            .colB
+                .nav-items
+                    li
+                        a
+                            color: $white
+                            &:hover
+                                color: $primary
+                        button.ham-btn
+                            span
+                                background-color: $white
+                            &:hover
+                                span
+                                    background-color: $primary
+    .header-container
+        .colB
+            .nav-items
+                li
+                    a
+                        color: $black
+                    button.ham-btn
+                        span
+                            background-color: $black
+
+.gallery_sec
+    background: linear-gradient(180deg, #EDED91 0%, #F8F9D8 70%)
+    padding: 220px 0 80px
+    .heading
+        text-align: center
+        margin-bottom: 50px
+        h2
+            color: $black
+            font-weight: 500
+    .gallery_wrapper
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 25px 20px
+        .gallery_item
+            display: block
+            height: 360px
+            &::before
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)
+            &:hover
+                figure
+                    img
+                        transform: scale(1.1)
+            figure
+                @include shine()
+                img
+                    transition: .8s ease
+            figcaption
+                padding: 0 30px 30px
+                h6
+                    font-size: 24px
+                    font-weight: 500
+                    line-height: 1.2

@@ -1,0 +1,597 @@
+@import '../_var'
+
+.home-loan-hero
+    background: linear-gradient(90deg, #155DFC 0%, #4F39F6 100%)
+    border-radius: 16px
+    padding: 50px
+    @include media(1170)
+        padding: 40px
+    @include media(991)
+        padding: 30px
+    @include media(768)
+        padding: 20px
+        border-radius: 10px
+    h2
+        font-size: 42px
+        color: $white
+        font-weight: 500
+        line-height: 48px
+        letter-spacing: 0px
+        margin-bottom: 14px
+        @include media(1170)
+            font-size: 38px
+        @include media(991)
+            font-size: 32px
+            line-height: 1.3
+            margin-bottom: 8px
+        @include media(768)
+            font-size: 26px
+        @include media(540)
+            font-size: 24px
+            line-height: 1.15
+    p
+        font-weight: 400
+        font-size: 18px
+        line-height: 28px
+        letter-spacing: 0px
+        color: $white
+        @include media(991)
+            font-size: 16px
+            line-height: 1.3 
+        @include media(540)
+            font-size: 14px
+            line-height: 1.2
+    ul
+        margin-top: 16px
+        display: flex
+        gap: 16px
+        @include media(768)
+            margin-top: 20px
+            gap: 10px
+        @include media(540)
+            flex-wrap: wrap
+        li
+            display: flex
+            align-items: center
+            gap: 10px
+            color: $white
+            background: #FFFFFF33
+            padding: 6px 16px
+            border-radius: 50px
+            font-size: 14px
+            @include media(768)
+                gap: 8px
+                padding: 5px 12px 
+                font-size: 12px
+            @include media(540)
+                width: 100%
+            img
+                width: 16px
+                height: 16px
+                @include media(768)
+                    width: 15px
+                    height: 15px
+
+.home-loan-secA
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 30px
+    margin-top: 50px
+    @include media(1170)
+        gap: 25px
+    @include media(991)
+        margin-top: 40px
+        gap: 15px
+    @include media(768)
+        grid-template-columns: repeat(2, 1fr)
+    @include media(540)
+        margin-top: 30px
+    .card
+        box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.1019607843), 1px 0px 6px -1px rgba(0, 0, 0, 0.1019607843)
+        border-radius: 10px
+        padding: 24px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+        @include media(1170)
+            padding: 20px
+        @include media(991)
+            padding: 15px
+        &:nth-child(1)
+            figure
+                background: #DBEAFE
+        &:nth-child(2)
+            figure
+                background: #DCFCE7
+        &:nth-child(3)
+            figure
+                background: #F3E8FF
+        &:nth-child(4)
+            figure
+                background: #FFEDD4
+        figure
+            width: 56px
+            height: 56px
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-bottom: 12px
+            @include media(991)
+                width: 50px
+                height: 50px
+                margin-bottom: 8px
+            @include media(540)
+                width: 45px
+                height: 45px
+                margin-bottom: 5px
+            img
+                width: 28px
+                height: 28px
+                @include media(991)
+                    width: 26px
+                    height: 26px
+                @include media(540)
+                    width: 22px
+                    height: 22px
+        h6
+            font-size: 18px
+            font-weight: 500
+            line-height: 28px
+            margin-bottom: 8px
+            @include media(991)
+                font-size: 16px
+                margin-bottom: 5px
+            @include media(540)
+                line-height: 1.3
+        p
+            font-size: 14px
+            font-weight: 400
+            line-height: 20px
+            @include media(991)
+                line-height: 1.3
+            @include media(540)
+                font-size: 12px
+
+.home-loan-secB
+    display: grid
+    grid-template-columns: 1fr 384px
+    gap: 24px
+    margin-top: 50px
+    @include media(991)
+        margin-top: 40px
+        gap: 20px
+        grid-template-columns: 1fr
+    .home-loan-form
+        height: fit-content
+        background: $white
+        padding: 30px
+        border-radius: 10px
+        box-shadow: 0px 2px 4px -2px #0000001A, 0px 4px 6px -1px #0000001A
+        @include media(1170)
+            padding: 25px
+        @include media(768)
+            padding: 20px
+        @include media(540)
+            padding: 20px 15px
+        .heading
+            margin-bottom: 24px
+            @include media(1170)
+                margin-bottom: 20px
+            h2
+                font-size: 30px
+                font-weight: 500
+                line-height: 36px
+                @include media(768)
+                    font-size: 26px
+                    line-height: 1.3
+                @include media(540)
+                    font-size: 24px
+            p
+                line-height: 24px
+                @include media(768)
+                    line-height: 1.3
+        .form
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            column-gap: 16px
+            row-gap: 12px
+            @include media(540)
+                grid-template-columns: repeat(1, 1fr)
+            .field
+                &.emi
+                    grid-column: span 2
+                    @include media(540)
+                        grid-column: span 1
+                label
+                    font-size: 14px
+                    line-height: 20px
+                    color: var(--secondary)
+                    font-weight: 500
+                .input
+                    margin-top: 8px
+                    input
+                        width: 100%
+                        padding: 12px 16px
+                        border: 1px solid var(--border)
+                        border-radius: 10px
+                        font-size: 14px
+                        line-height: 20px
+                        color: var(--secondary)
+                        outline: none
+            .note
+                border: 1px solid #BEDBFF
+                border-radius: 10px
+                padding: 16px
+                background: #F0F9FF
+                display: flex
+                align-items: center
+                gap: 10px
+                margin: 24px 0 12px
+                grid-column: span 2
+                @include media(768)
+                    padding: 12px
+                    margin: 18px 0 10px
+                @include media(540)
+                    grid-column: span 1
+                img
+                    width: 24px
+                    height: 24px
+                p
+                    font-size: 14px
+                    line-height: 20px
+                    color: #0F172A
+                    @include media(540)
+                        font-size: 12px
+                        line-height: 1.4
+            h5
+                grid-column: span 2
+                font-size: 18px
+                line-height: 28px
+                font-weight: 600
+                color: #0F172B
+                &:not(:first-child)
+                    margin-top: 12px
+                @include media(540)
+                    grid-column: span 1
+            .btn
+                max-width: 100%
+                padding: 20px 16px
+                grid-column: span 2
+                @include media(540)
+                    grid-column: span 1
+
+    .aside
+        position: sticky
+        top: calc(var(--headerheight) + 40px)
+        @include media(768)
+            position: static
+        .usp
+            border-radius: 10px
+            padding: 24px
+            background: linear-gradient(135deg, #00A63E 0%, #009689 100%)
+            @include media(768)
+                padding: 20px
+            @include media(540)
+                padding: 20px 15px
+            h5
+                color: $white
+                font-size: 20px
+                line-height: 28px
+                margin-bottom: 16px
+                @include media(540)
+                    font-size: 18px
+                    line-height: 1.3
+                    margin-bottom: 12px
+            ul
+                li
+                    display: flex
+                    align-items: center
+                    gap: 8px
+                    font-size: 14px
+                    line-height: 20px
+                    color: $white
+                    &:not(:last-child)
+                        margin-bottom: 8px
+                    @include media(540)
+                        font-size: 12px
+                        line-height: 1.3
+                    img
+                        width: 16.67px
+                        height: 16.67px
+                        @include media(540)
+                            width: 13px
+                            height: 13px
+        .help
+            margin-top: 24px
+            border-radius: 10px
+            padding: 24px
+            background: $white
+            box-shadow: 0px 2px 4px -2px #0000001A, 0px 4px 6px -1px #0000001A
+            @include media(768)
+                padding: 20px
+            @include media(540)
+                padding: 20px 15px
+            h5
+                font-size: 20px
+                line-height: 28px
+                margin-bottom: 16px
+                @include media(768)
+                    line-height: 1.3
+                    margin-bottom: 14px
+                @include media(540)
+                    font-size: 18px
+            .call
+                display: flex
+                align-items: center
+                gap: 10px
+                figure
+                    width: 40px
+                    height: 40px
+                    border-radius: 50%
+                    background: #DBEAFE
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    img
+                        width: 20px
+                        height: 20px
+                figcaption
+                    display: flex
+                    flex-direction: column
+                    gap: 2px
+                    span
+                        font-size: 14px
+                        line-height: 20px
+                        color: $text
+                    a
+                        font-size: 16px
+                        line-height: 24px
+                        font-weight: 600
+                        color: #314158
+                
+
+.home-loan-secD
+    margin-top: 50px
+    background: $white
+    padding: 30px
+    border-radius: 10px
+    box-shadow: 0px 2px 4px -2px #0000001A, 0px 4px 6px -1px #0000001A
+    @include media(991)
+        margin-top: 40px
+        padding: 20px
+    @include media(540)
+        margin-top: 30px
+        padding: 20px 15px
+    .heading 
+        margin-bottom: 32px
+        @include media(991)
+            margin-bottom: 25px
+        @include media(540)
+            margin-bottom: 20px
+        h2
+            text-align: center
+            font-size: 30px
+            @include media(991)
+                font-size: 26px
+            @include media(768)
+                font-size: 24px
+            @include media(540)
+                font-size: 22px
+    .card-wrapper
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 50px
+        @include media(1170)
+            gap: 40px
+        @include media(991)
+            gap: 20px
+        @include media(768)
+            grid-template-columns: repeat(1, 1fr)
+        .card
+            &:nth-child(1)
+                figure
+                    background: #DBEAFE
+            &:nth-child(2)
+                figure
+                    background: #DCFCE7
+            &:nth-child(3)
+                figure
+                    background: #F3E8FF
+            .card-head
+                display: flex
+                align-items: center
+                gap: 10px
+                margin-bottom: 12px
+                figure
+                    width: 48px
+                    height: 48px
+                    border-radius: 10px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    img
+                        width: 24px
+                        height: 24px
+                figcaption
+                    font-size: 20px
+                    font-weight: 500
+                    line-height: 28px
+                    margin-bottom: 8px
+                    @include media(1170)
+                        font-size: 18px
+                    @include media(991)
+                        font-size: 16px
+                        line-height: 1.2
+            p
+                line-height: 24px
+                @include media(1170)
+                    line-height: 20px
+
+.home-loan-secE
+    background: linear-gradient(90deg, #9810FA 0%, #E60076 100%)
+    border-radius: 10px
+    padding: 30px
+    margin-top: 50px
+    @include media(991)
+        margin-top: 40px
+        padding: 20px
+    @include media(540)
+        margin-top: 30px
+        padding: 20px 15px
+    .heading
+        h2
+            color: $white
+            text-align: center
+            font-size: 30px
+            font-weight: 500
+            line-height: 36px
+            @include media(991)
+                font-size: 26px
+                line-height: 1.2
+            @include media(540)
+                font-size: 22px
+        p
+            text-align: center
+            color: $white
+            font-size: 20px
+            font-weight: 400
+            line-height: 28px    
+            @include media(1170)
+                font-size: 18px
+            @include media(991)
+                font-size: 16px
+                line-height: 1.3
+            @include media(540)
+                font-size: 14px
+    .btn
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        margin: 20px auto  0px
+        img
+            width: 20px
+            height: 20px
+        &:hover
+            img
+                filter: brightness(0) invert(1)
+            
+.avoid-costs
+    margin-top: 40px
+    @include media(991)
+        margin-top: 30px
+    table
+        background: $white
+        width: 100%
+        border-radius: 10px
+        overflow: hidden
+        border-collapse: collapse
+        box-shadow: 0px 2px 4px -2px #0000001A, 0px 4px 6px -1px #0000001A
+        thead
+            tr
+                th
+                    background: var(--primary)
+                    color: $white
+                    padding: 12px
+                    font-size: 16px
+                    font-weight: 500
+                    line-height: 1
+                    text-align: left
+                    font-weight: 700
+                    @include media(991)
+                        font-size: 14px
+                    @include media(768)
+                        padding: 10px
+                        font-weight: 600
+                    @include media(540)
+                        padding: 8px
+                        font-size: 12px
+
+        tbody
+            tr
+                td
+                    padding: 12px
+                    font-size: 15px
+                    line-height: 1.2
+                    border-bottom: 1px solid #E5E7EB
+                    color: #45556C
+                    @include media(991)
+                        font-size: 14px
+                    @include media(768)
+                        padding: 10px
+                        font-size: 12px
+                    @include media(540)
+                        padding: 8px
+    .precaution
+        margin-top: 40px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 25px
+        @include media(991)
+            gap: 20px
+        @include media(768)
+            grid-template-columns: repeat(1, 1fr)
+            margin-top: 30px
+        @include media(540)
+            margin-top: 25px
+        .card
+            border-radius: 10px
+            background: $white
+            padding: 30px
+            box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.1019607843), 0px 1px 6px 0px rgba(0, 0, 0, 0.1019607843)
+            @include media(991)
+                padding: 20px
+            img, svg
+                width: 40px
+                height: 40px
+                margin-bottom: 8px
+                @include media(991)
+                    width: 35px
+                    height: 35px
+            h6
+                font-size: 18px
+                font-weight: 500
+                line-height: 28px
+                margin-bottom: 4px
+            p
+                font-size: 16px
+                color: var(--text)
+                max-width: 90%
+
+.note_wrap
+    display: flex
+    align-items: start
+    gap: 15px
+    padding: 25px
+    background: #FEFCE8
+    border: 1px solid #FFF085
+    border-radius: 10px
+    margin-top: 40px
+    @include media(991)
+        padding: 20px
+        margin-top: 30px
+    @include media(768)
+        margin-top: 25px
+        padding: 15px
+    @include media(540)
+        margin-top: 20px
+    .icon
+        flex: 0 1 auto
+        width: 25px
+        height: 25px
+        img
+            object-fit: contain
+    .content
+        flex: 1
+        h6
+            font-size: 18px
+            font-weight: 500
+            margin-bottom: 5px
+            @include media(540)
+                font-size: 16px
+        p
+            line-height: 1.2
+            font-size: 14px
